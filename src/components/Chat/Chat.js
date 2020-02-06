@@ -35,8 +35,19 @@ const Chat = ({ location }) => {
             setMessages([...messages, message]);
         })
     }, [messages]);
+
+// FUNCTION FOR SENDING MESSAGES
+
+
     return (
-        <h1>Chat Page</h1>
+        <div className="outerContainer">
+            <div className="container">
+                <input 
+                value={message} 
+                onChange={(event) => setMessage(event.target.value)} 
+                onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null} />
+            </div>
+        </div>
     )
 };
 
