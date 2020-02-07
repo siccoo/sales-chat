@@ -15,6 +15,7 @@ const Chat = ({ location }) => {
     const [message, setMessage] = useState();
     const [messages, setMessages] = useState([]);
     const ENDPOINT = 'localhost:5000';
+    // We wont be needing localhost:5000 again, we will put the URL gotten from the backend server as our ENDPOINT
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
